@@ -8,12 +8,17 @@
 
 import UIKit
 
+protocol EditProfileViewControllerDelegate: class {
+    func editProfileViewControllerDidEditProfileInfo(viewController: EditProfileViewController)
+}
+
 class EditProfileViewController: UIViewController, Stateful {
     
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var aboutMeTextView: UITextView!
     
     var stateController: StateController?
+    weak var delegate: EditProfileViewControllerDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +41,7 @@ class EditProfileViewController: UIViewController, Stateful {
             !name.isEmpty && !aboutMe.isEmpty {
             let oldUser = stateController.user
             stateController.user = User(name: name, aboutMe: aboutMe, profileImage: oldUser.profileImage, phoneNumber: oldUser.phoneNumber)
+            delegate?.editProfileViewControllerDidEditProfileInfo(viewController: self)
             dismiss(animated: true, completion: nil)
         } else {
             let title = "Missing name or about me"
