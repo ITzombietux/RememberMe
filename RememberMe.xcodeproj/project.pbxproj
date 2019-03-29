@@ -22,6 +22,7 @@
 		9300937F224E0FF300EDFD6D /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9300937E224E0FF300EDFD6D /* UIColor.swift */; };
 		93009381224E168600EDFD6D /* UINavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93009380224E168600EDFD6D /* UINavigationBar.swift */; };
 		93009389224E454400EDFD6D /* TopFriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93009388224E454400EDFD6D /* TopFriendsViewController.swift */; };
+		9300938B224E473300EDFD6D /* FriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9300938A224E473300EDFD6D /* FriendCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		9300937E224E0FF300EDFD6D /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		93009380224E168600EDFD6D /* UINavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationBar.swift; sourceTree = "<group>"; };
 		93009388224E454400EDFD6D /* TopFriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopFriendsViewController.swift; sourceTree = "<group>"; };
+		9300938A224E473300EDFD6D /* FriendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 				9300937E224E0FF300EDFD6D /* UIColor.swift */,
 				93009380224E168600EDFD6D /* UINavigationBar.swift */,
 				93009388224E454400EDFD6D /* TopFriendsViewController.swift */,
+				9300938A224E473300EDFD6D /* FriendCell.swift */,
 			);
 			path = RememberMe;
 			sourceTree = "<group>";
@@ -176,6 +179,7 @@
 				93009379224DAE1500EDFD6D /* EditProfileViewController.swift in Sources */,
 				93009381224E168600EDFD6D /* UINavigationBar.swift in Sources */,
 				93009389224E454400EDFD6D /* TopFriendsViewController.swift in Sources */,
+				9300938B224E473300EDFD6D /* FriendCell.swift in Sources */,
 				9300937F224E0FF300EDFD6D /* UIColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
