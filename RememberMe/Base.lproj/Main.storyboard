@@ -211,7 +211,7 @@
                     <navigationItem key="navigationItem" id="fTl-uo-qB8">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="kEv-S9-mW7">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="VoJ-B8-4jn">
-                                <rect key="frame" x="321" y="70" width="30" height="30"/>
+                                <rect key="frame" x="329" y="7" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Edit"/>
                                 <connections>
