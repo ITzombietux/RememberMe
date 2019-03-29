@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FriendViewController: UIViewController {
+class FriendViewController: UIViewController, Stateful {
     
     @IBOutlet weak var callingCardImage: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
@@ -16,19 +16,28 @@ class FriendViewController: UIViewController {
     @IBOutlet weak var introduceLabel: UILabel!
     @IBOutlet weak var profileImage: UIImageView!
     
-    private let stateController = StateController()
+    var stateController: StateController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let friend = stateController.friend
+        guard let friend = stateController?.friend else {
+            return
+        }
         nameLabel.text = friend.owner.name
         phoneNumberLabel.text = friend.owner.phoneNumber
         introduceLabel.text = friend.introduce
         callingCardImage.image = UIImage(named: friend.callingCardImage)
         profileImage.image = UIImage(named: friend.owner.profileImage)
         
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let profileViewController = segue.destination as? ProfileViewController {
+            passState(to: profileViewController)
+            profileViewController.user = stateController?.friend.owner
+        }
     }
     
     @IBAction func ScheduleTapped(_ sender: UIButton) {

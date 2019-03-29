@@ -17,6 +17,8 @@
 		93009375224D0C8C00EDFD6D /* Views.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93009374224D0C8C00EDFD6D /* Views.swift */; };
 		93009377224DAB9C00EDFD6D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93009376224DAB9C00EDFD6D /* ProfileViewController.swift */; };
 		93009379224DAE1500EDFD6D /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93009378224DAE1500EDFD6D /* EditProfileViewController.swift */; };
+		9300937B224DE42F00EDFD6D /* Stateful.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9300937A224DE42F00EDFD6D /* Stateful.swift */; };
+		9300937D224DE67300EDFD6D /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9300937C224DE67300EDFD6D /* MainTabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		93009374224D0C8C00EDFD6D /* Views.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views.swift; sourceTree = "<group>"; };
 		93009376224DAB9C00EDFD6D /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		93009378224DAE1500EDFD6D /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		9300937A224DE42F00EDFD6D /* Stateful.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stateful.swift; sourceTree = "<group>"; };
+		9300937C224DE67300EDFD6D /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +79,8 @@
 				93009374224D0C8C00EDFD6D /* Views.swift */,
 				93009376224DAB9C00EDFD6D /* ProfileViewController.swift */,
 				93009378224DAE1500EDFD6D /* EditProfileViewController.swift */,
+				9300937A224DE42F00EDFD6D /* Stateful.swift */,
+				9300937C224DE67300EDFD6D /* MainTabBarController.swift */,
 			);
 			path = RememberMe;
 			sourceTree = "<group>";
@@ -151,6 +157,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				93009377224DAB9C00EDFD6D /* ProfileViewController.swift in Sources */,
+				9300937B224DE42F00EDFD6D /* Stateful.swift in Sources */,
+				9300937D224DE67300EDFD6D /* MainTabBarController.swift in Sources */,
 				93009371224D097100EDFD6D /* Model.swift in Sources */,
 				93009373224D098B00EDFD6D /* StateController.swift in Sources */,
 				93009361224D087900EDFD6D /* FriendViewController.swift in Sources */,
