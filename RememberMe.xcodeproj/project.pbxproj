@@ -21,6 +21,7 @@
 		9300937D224DE67300EDFD6D /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9300937C224DE67300EDFD6D /* MainTabBarController.swift */; };
 		9300937F224E0FF300EDFD6D /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9300937E224E0FF300EDFD6D /* UIColor.swift */; };
 		93009381224E168600EDFD6D /* UINavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93009380224E168600EDFD6D /* UINavigationBar.swift */; };
+		93009389224E454400EDFD6D /* TopFriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93009388224E454400EDFD6D /* TopFriendsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		9300937C224DE67300EDFD6D /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		9300937E224E0FF300EDFD6D /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		93009380224E168600EDFD6D /* UINavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationBar.swift; sourceTree = "<group>"; };
+		93009388224E454400EDFD6D /* TopFriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopFriendsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 				9300937C224DE67300EDFD6D /* MainTabBarController.swift */,
 				9300937E224E0FF300EDFD6D /* UIColor.swift */,
 				93009380224E168600EDFD6D /* UINavigationBar.swift */,
+				93009388224E454400EDFD6D /* TopFriendsViewController.swift */,
 			);
 			path = RememberMe;
 			sourceTree = "<group>";
@@ -172,6 +175,7 @@
 				9300935F224D087900EDFD6D /* AppDelegate.swift in Sources */,
 				93009379224DAE1500EDFD6D /* EditProfileViewController.swift in Sources */,
 				93009381224E168600EDFD6D /* UINavigationBar.swift in Sources */,
+				93009389224E454400EDFD6D /* TopFriendsViewController.swift in Sources */,
 				9300937F224E0FF300EDFD6D /* UIColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
