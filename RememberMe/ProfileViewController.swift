@@ -28,9 +28,19 @@ class ProfileViewController: UIViewController, Stateful {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let navigationController = segue.destination as? UINavigationController,
-            let destination = navigationController.viewControllers.first as? Stateful {
+//        if let navigationController = segue.destination as? UINavigationController,
+//            let destination = navigationController.viewControllers.first as? Stateful {
+//            passState(to: destination)
+//        }
+        guard let navigationController = segue.destination as? UINavigationController else {
+            return
+        }
+        let destination = navigationController.viewControllers.first
+        if let destination = destination as? Stateful {
             passState(to: destination)
+        }
+        if let destination = destination as? EditProfileViewController {
+            destination.delegate = self
         }
     }
     
@@ -39,5 +49,13 @@ class ProfileViewController: UIViewController, Stateful {
         nameLabel.text = user.name
         phoneNumberLabel.text = user.phoneNumber
         aboutMeLabel.text = user.aboutMe
+    }
+}
+
+extension ProfileViewController: EditProfileViewControllerDelegate {
+    func editProfileViewControllerDidEditProfileInfo(viewController: EditProfileViewController) {
+        nameLabel.textColor = UIColor.orange
+        phoneNumberLabel.textColor = UIColor.orange
+        aboutMeLabel.textColor = UIColor.orange
     }
 }
