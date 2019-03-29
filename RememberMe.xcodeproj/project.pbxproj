@@ -23,6 +23,7 @@
 		93009381224E168600EDFD6D /* UINavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93009380224E168600EDFD6D /* UINavigationBar.swift */; };
 		93009389224E454400EDFD6D /* TopFriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93009388224E454400EDFD6D /* TopFriendsViewController.swift */; };
 		9300938B224E473300EDFD6D /* FriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9300938A224E473300EDFD6D /* FriendCell.swift */; };
+		9300938D224E4CC400EDFD6D /* FriendDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9300938C224E4CC400EDFD6D /* FriendDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		93009380224E168600EDFD6D /* UINavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationBar.swift; sourceTree = "<group>"; };
 		93009388224E454400EDFD6D /* TopFriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopFriendsViewController.swift; sourceTree = "<group>"; };
 		9300938A224E473300EDFD6D /* FriendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCell.swift; sourceTree = "<group>"; };
+		9300938C224E4CC400EDFD6D /* FriendDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 				93009380224E168600EDFD6D /* UINavigationBar.swift */,
 				93009388224E454400EDFD6D /* TopFriendsViewController.swift */,
 				9300938A224E473300EDFD6D /* FriendCell.swift */,
+				9300938C224E4CC400EDFD6D /* FriendDataSource.swift */,
 			);
 			path = RememberMe;
 			sourceTree = "<group>";
@@ -172,6 +175,7 @@
 				9300937B224DE42F00EDFD6D /* Stateful.swift in Sources */,
 				9300937D224DE67300EDFD6D /* MainTabBarController.swift in Sources */,
 				93009371224D097100EDFD6D /* Model.swift in Sources */,
+				9300938D224E4CC400EDFD6D /* FriendDataSource.swift in Sources */,
 				93009373224D098B00EDFD6D /* StateController.swift in Sources */,
 				93009361224D087900EDFD6D /* FriendViewController.swift in Sources */,
 				93009375224D0C8C00EDFD6D /* Views.swift in Sources */,
