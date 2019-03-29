@@ -17,12 +17,13 @@ class FriendViewController: UIViewController, Stateful {
     @IBOutlet weak var profileImage: UIImageView!
     
     var stateController: StateController?
+    var friend: Friend?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        guard let friend = stateController?.friend else {
+        guard let friend = friend else {
             return
         }
         nameLabel.text = friend.owner.name
@@ -36,7 +37,7 @@ class FriendViewController: UIViewController, Stateful {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let profileViewController = segue.destination as? ProfileViewController {
             passState(to: profileViewController)
-            profileViewController.user = stateController?.friend.owner
+            profileViewController.user = friend?.owner
         }
     }
     

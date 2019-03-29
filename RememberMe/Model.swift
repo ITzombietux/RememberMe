@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct User {
+struct User: Equatable {
     let name: String
     let aboutMe: String
     let profileImage: String
@@ -19,4 +19,13 @@ struct Friend {
     let callingCardImage: String
     let introduce: String
     let owner: User
+}
+
+extension Friend: Equatable {
+    static func == (lhs: Friend, rhs: Friend) -> Bool {
+        return
+            lhs.callingCardImage == rhs.callingCardImage &&
+                lhs.introduce == rhs.introduce &&
+                lhs.owner == rhs.owner
+    }
 }
