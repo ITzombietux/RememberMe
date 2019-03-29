@@ -11,7 +11,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Friend View Controller-->
+        <!--Friend-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="FriendViewController" customModule="RememberMe" customModuleProvider="target" sceneMemberID="viewController">
@@ -134,7 +134,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="VCX-gp-tl7"/>
                     </view>
-                    <navigationItem key="navigationItem" id="0r9-fd-wyd"/>
+                    <navigationItem key="navigationItem" title="Friend" id="0r9-fd-wyd"/>
                     <connections>
                         <outlet property="callingCardImage" destination="9sg-C8-7uc" id="Qm0-bn-OeH"/>
                         <outlet property="introduceLabel" destination="Fos-N9-oLs" id="fRH-U9-Gqe"/>
@@ -147,7 +147,7 @@
             </objects>
             <point key="canvasLocation" x="2548" y="25.637181409295355"/>
         </scene>
-        <!--Profile View Controller-->
+        <!--Profile-->
         <scene sceneID="mEY-FN-mT5">
             <objects>
                 <viewController id="WOS-QG-zLb" customClass="ProfileViewController" customModule="RememberMe" customModuleProvider="target" sceneMemberID="viewController">
@@ -208,14 +208,14 @@
                         <directionalEdgeInsets key="directionalLayoutMargins" top="24" leading="24" bottom="24" trailing="24"/>
                         <viewLayoutGuide key="safeArea" id="yBH-VM-h8g"/>
                     </view>
-                    <navigationItem key="navigationItem" id="fTl-uo-qB8">
+                    <navigationItem key="navigationItem" title="Profile" id="fTl-uo-qB8">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="kEv-S9-mW7">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="VoJ-B8-4jn">
                                 <rect key="frame" x="329" y="7" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Edit"/>
                                 <connections>
-                                    <segue destination="FM4-Jn-miq" kind="presentation" id="O5W-FT-jqr"/>
+                                    <segue destination="Eaw-ao-UGA" kind="presentation" id="9J6-Os-aTn"/>
                                 </connections>
                             </button>
                         </barButtonItem>
@@ -231,10 +231,10 @@
             </objects>
             <point key="canvasLocation" x="2548" y="810.94452773613204"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Main Tab Bar Controller-->
         <scene sceneID="Jvg-XR-nYB">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="yWJ-hs-mvG" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="yWJ-hs-mvG" customClass="MainTabBarController" customModule="RememberMe" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="c5m-k9-MCJ">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -249,107 +249,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hn9-pr-Lg5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="669.60000000000002" y="417.8410794602699"/>
-        </scene>
-        <!--Edit Profile View Controller-->
-        <scene sceneID="TL5-bn-4aH">
-            <objects>
-                <viewController id="5U5-xK-VrF" customClass="EditProfileViewController" customModule="RememberMe" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="AtC-9E-oQG"/>
-                        <viewControllerLayoutGuide type="bottom" id="Zym-2B-3dw"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="hAH-JH-yYT">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hYb-7G-0D6">
-                                <rect key="frame" x="24" y="142" width="327" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="SUv-b0-CwK"/>
-                                </constraints>
-                                <color key="textColor" name="Cloud Burst"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" name="Gray Chateau"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u5b-5x-61J">
-                                <rect key="frame" x="24" y="196" width="327" height="148"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="148" id="LCS-0u-vMp"/>
-                                </constraints>
-                                <color key="textColor" name="Cloud Burst"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" name="Gray Chateau"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </textView>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="u5b-5x-61J" firstAttribute="top" secondItem="hYb-7G-0D6" secondAttribute="bottom" constant="24" id="2Xk-Nq-g9a"/>
-                            <constraint firstItem="hYb-7G-0D6" firstAttribute="leading" secondItem="hAH-JH-yYT" secondAttribute="leadingMargin" id="Di8-e9-1b1"/>
-                            <constraint firstItem="hYb-7G-0D6" firstAttribute="top" secondItem="AtC-9E-oQG" secondAttribute="bottom" constant="78" id="Ugd-og-3ik"/>
-                            <constraint firstItem="u5b-5x-61J" firstAttribute="leading" secondItem="hAH-JH-yYT" secondAttribute="leadingMargin" id="dXl-dE-UCa"/>
-                            <constraint firstItem="hYb-7G-0D6" firstAttribute="trailing" secondItem="hAH-JH-yYT" secondAttribute="trailingMargin" id="qYk-w3-kBK"/>
-                            <constraint firstItem="u5b-5x-61J" firstAttribute="trailing" secondItem="hAH-JH-yYT" secondAttribute="trailingMargin" id="umd-fW-DUS"/>
-                        </constraints>
-                        <directionalEdgeInsets key="directionalLayoutMargins" top="24" leading="24" bottom="24" trailing="24"/>
-                        <viewLayoutGuide key="safeArea" id="yVk-Hs-bbP"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="2FP-nK-06G">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="aUM-fp-sl8">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="mPj-mf-dMZ">
-                                <rect key="frame" x="16" y="7" width="48" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Cancel">
-                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="cancel:" destination="5U5-xK-VrF" eventType="touchUpInside" id="lpk-OL-aKQ"/>
-                                </connections>
-                            </button>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" style="done" id="WVq-vq-Cvc">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ijQ-Uf-Y56">
-                                <rect key="frame" x="325" y="7" width="34" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Save">
-                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="save:" destination="5U5-xK-VrF" eventType="touchUpInside" id="yRp-sz-zut"/>
-                                </connections>
-                            </button>
-                        </barButtonItem>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="aboutMeTextView" destination="u5b-5x-61J" id="imR-On-2s3"/>
-                        <outlet property="nameTextField" destination="hYb-7G-0D6" id="qw4-mP-OLh"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bi0-uz-aQm" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4479.1999999999998" y="810.94452773613204"/>
         </scene>
         <!--Friends-->
         <scene sceneID="ZrV-eG-QX6">
@@ -389,23 +288,77 @@
             </objects>
             <point key="canvasLocation" x="1608.8" y="810.94452773613204"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="2Pt-cT-m1u">
+        <!--Edit Profile-->
+        <scene sceneID="Y7y-5U-76H">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FM4-Jn-miq" sceneMemberID="viewController">
+                <viewController id="IsO-YU-dFC" customClass="EditProfileViewController" customModule="RememberMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rWc-d8-xkH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9eh-oW-P4b">
+                                <rect key="frame" x="25" y="144" width="325" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="p5w-TN-avi">
+                                <rect key="frame" x="25" y="200" width="325" height="167"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="p5w-TN-avi" firstAttribute="trailing" secondItem="9eh-oW-P4b" secondAttribute="trailing" id="10M-ye-mKS"/>
+                            <constraint firstItem="9eh-oW-P4b" firstAttribute="top" secondItem="ktX-iI-XHX" secondAttribute="top" constant="80" id="EhX-jj-noX"/>
+                            <constraint firstItem="p5w-TN-avi" firstAttribute="top" secondItem="9eh-oW-P4b" secondAttribute="bottom" constant="26" id="Gax-yv-Pty"/>
+                            <constraint firstItem="9eh-oW-P4b" firstAttribute="leading" secondItem="ktX-iI-XHX" secondAttribute="leading" constant="25" id="Lzc-bV-EWU"/>
+                            <constraint firstItem="ktX-iI-XHX" firstAttribute="trailing" secondItem="9eh-oW-P4b" secondAttribute="trailing" constant="25" id="YBY-M9-iae"/>
+                            <constraint firstItem="ktX-iI-XHX" firstAttribute="bottom" secondItem="p5w-TN-avi" secondAttribute="bottom" constant="300" id="qGP-db-SEh"/>
+                            <constraint firstItem="p5w-TN-avi" firstAttribute="leading" secondItem="9eh-oW-P4b" secondAttribute="leading" id="tcb-I8-wuE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ktX-iI-XHX"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Edit Profile" id="syC-Gb-VYF">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="RJd-YJ-Sxj">
+                            <connections>
+                                <action selector="cancel:" destination="IsO-YU-dFC" id="ULW-rL-Pt3"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="save" id="B3o-WC-tFw">
+                            <connections>
+                                <action selector="save:" destination="IsO-YU-dFC" id="nKs-4S-VbM"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="aboutMeTextView" destination="p5w-TN-avi" id="kaa-qp-gby"/>
+                        <outlet property="nameTextField" destination="9eh-oW-P4b" id="EEZ-34-gz6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AlV-k5-tmB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4780" y="811"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Ol3-cn-Yfg">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Eaw-ao-UGA" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YLx-UL-Qwf">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="b7x-7M-LkK">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="5U5-xK-VrF" kind="relationship" relationship="rootViewController" id="WxS-id-3e8"/>
+                        <segue destination="IsO-YU-dFC" kind="relationship" relationship="rootViewController" id="3Fs-fF-M52"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7ia-jO-B80" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="40v-T5-QCT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3540" y="810.94452773613204"/>
+            <point key="canvasLocation" x="3687" y="810"/>
         </scene>
     </scenes>
     <resources>
@@ -415,9 +368,6 @@
         <image name="Questions" width="30" height="30"/>
         <image name="털보" width="324" height="432"/>
         <image name="토끼" width="324" height="432"/>
-        <namedColor name="Cloud Burst">
-            <color red="0.12200000137090683" green="0.18400000035762787" blue="0.25099998712539673" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="Gray Chateau">
             <color red="0.63499999046325684" green="0.67100000381469727" blue="0.71399998664855957" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
