@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FriendViewController: UIViewController, Stateful {
+class FriendViewController: UITableViewController, Stateful {
     
     @IBOutlet weak var callingCardImage: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
@@ -39,6 +39,10 @@ class FriendViewController: UIViewController, Stateful {
             passState(to: profileViewController)
             profileViewController.user = friend?.owner
         }
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
     }
     
     @IBAction func ScheduleTapped(_ sender: UIButton) {
