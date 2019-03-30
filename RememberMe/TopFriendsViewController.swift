@@ -15,6 +15,12 @@ class TopQuestionsViewController: UIViewController, Stateful {
     var friendsDataSource: FriendDataSource?
     var stateController: StateController?
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        tableView.separatorColor = .electricViolet
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         guard let topFriends = stateController?.topFriends else {
             return
