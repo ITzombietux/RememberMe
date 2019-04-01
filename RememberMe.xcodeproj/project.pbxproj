@@ -24,6 +24,11 @@
 		93009389224E454400EDFD6D /* TopFriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93009388224E454400EDFD6D /* TopFriendsViewController.swift */; };
 		9300938B224E473300EDFD6D /* FriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9300938A224E473300EDFD6D /* FriendCell.swift */; };
 		9300938D224E4CC400EDFD6D /* FriendDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9300938C224E4CC400EDFD6D /* FriendDataSource.swift */; };
+		9300938F2251BE9300EDFD6D /* Data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9300938E2251BE9300EDFD6D /* Data.plist */; };
+		930093912251DC6F00EDFD6D /* StorageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930093902251DC6F00EDFD6D /* StorageController.swift */; };
+		930093932251DFF700EDFD6D /* ColorScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930093922251DFF700EDFD6D /* ColorScheme.swift */; };
+		930093952251E38600EDFD6D /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930093942251E38600EDFD6D /* SettingsController.swift */; };
+		930093972251E4E100EDFD6D /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930093962251E4E100EDFD6D /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +51,11 @@
 		93009388224E454400EDFD6D /* TopFriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopFriendsViewController.swift; sourceTree = "<group>"; };
 		9300938A224E473300EDFD6D /* FriendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCell.swift; sourceTree = "<group>"; };
 		9300938C224E4CC400EDFD6D /* FriendDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendDataSource.swift; sourceTree = "<group>"; };
+		9300938E2251BE9300EDFD6D /* Data.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Data.plist; sourceTree = "<group>"; };
+		930093902251DC6F00EDFD6D /* StorageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageController.swift; sourceTree = "<group>"; };
+		930093922251DFF700EDFD6D /* ColorScheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorScheme.swift; sourceTree = "<group>"; };
+		930093942251E38600EDFD6D /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
+		930093962251E4E100EDFD6D /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +106,11 @@
 				93009388224E454400EDFD6D /* TopFriendsViewController.swift */,
 				9300938A224E473300EDFD6D /* FriendCell.swift */,
 				9300938C224E4CC400EDFD6D /* FriendDataSource.swift */,
+				9300938E2251BE9300EDFD6D /* Data.plist */,
+				930093902251DC6F00EDFD6D /* StorageController.swift */,
+				930093922251DFF700EDFD6D /* ColorScheme.swift */,
+				930093942251E38600EDFD6D /* SettingsController.swift */,
+				930093962251E4E100EDFD6D /* SettingsViewController.swift */,
 			);
 			path = RememberMe;
 			sourceTree = "<group>";
@@ -160,6 +175,7 @@
 			files = (
 				93009369224D087B00EDFD6D /* LaunchScreen.storyboard in Resources */,
 				93009366224D087B00EDFD6D /* Assets.xcassets in Resources */,
+				9300938F2251BE9300EDFD6D /* Data.plist in Resources */,
 				93009364224D087900EDFD6D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -171,8 +187,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				930093932251DFF700EDFD6D /* ColorScheme.swift in Sources */,
 				93009377224DAB9C00EDFD6D /* ProfileViewController.swift in Sources */,
 				9300937B224DE42F00EDFD6D /* Stateful.swift in Sources */,
+				930093952251E38600EDFD6D /* SettingsController.swift in Sources */,
 				9300937D224DE67300EDFD6D /* MainTabBarController.swift in Sources */,
 				93009371224D097100EDFD6D /* Model.swift in Sources */,
 				9300938D224E4CC400EDFD6D /* FriendDataSource.swift in Sources */,
@@ -185,6 +203,8 @@
 				93009389224E454400EDFD6D /* TopFriendsViewController.swift in Sources */,
 				9300938B224E473300EDFD6D /* FriendCell.swift in Sources */,
 				9300937F224E0FF300EDFD6D /* UIColor.swift in Sources */,
+				930093912251DC6F00EDFD6D /* StorageController.swift in Sources */,
+				930093972251E4E100EDFD6D /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

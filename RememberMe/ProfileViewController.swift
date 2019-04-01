@@ -9,6 +9,7 @@
 import UIKit
 
 class ProfileViewController: UIViewController, Stateful {
+    
     @IBOutlet weak var profilePictureImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var phoneNumberLabel: UILabel!
@@ -16,6 +17,7 @@ class ProfileViewController: UIViewController, Stateful {
     
     var user: User?
     var stateController: StateController?
+    var settingsController: SettingsController?
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -28,10 +30,7 @@ class ProfileViewController: UIViewController, Stateful {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if let navigationController = segue.destination as? UINavigationController,
-//            let destination = navigationController.viewControllers.first as? Stateful {
-//            passState(to: destination)
-//        }
+
         guard let navigationController = segue.destination as? UINavigationController else {
             return
         }
@@ -50,6 +49,20 @@ class ProfileViewController: UIViewController, Stateful {
         phoneNumberLabel.text = user.phoneNumber
         aboutMeLabel.text = user.aboutMe
     }
+    
+    @IBAction func editWasSaved(_ segue: UIStoryboardSegue) {
+        guard let editViewController = segue.source as? EditProfileViewController else {
+            return
+        }
+        if editViewController.nameDidChange {
+            nameLabel.textColor = UIColor.orange
+        }
+        if editViewController.aboutMeDidChange {
+            aboutMeLabel.textColor = UIColor.orange
+        }
+    }
+    
+    @IBAction func editWasCanceled(_ segue: UIStoryboardSegue) {}
 }
 
 extension ProfileViewController: EditProfileViewControllerDelegate {

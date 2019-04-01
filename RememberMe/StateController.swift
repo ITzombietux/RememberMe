@@ -10,9 +10,17 @@ import Foundation
 
 class StateController {
     
+    private let storageController = StorageController()
     private (set) var topFriends: [Friend] = StateController.createFriends()
     
-    var user = User(name: "흑석동토깽이", aboutMe: "저는 26살 IOS개발자 김민식입니다. 현재는 보안 모듈 엔지니어로 활동 중이고, C/C++로 윈도우 개발도 공부 중입니다.", profileImage: "토끼", phoneNumber: "010 - 5024 - 3129")
+    var user: User {
+        get { return storageController.fetchUser() }
+        set { storageController.save(newValue) }
+    }
+    
+    init() {
+        self.topFriends = storageController.fetchTopFriends() ?? []
+    }
     
     func updateFriend(_ friend: Friend) {
         var friendIndex = 0

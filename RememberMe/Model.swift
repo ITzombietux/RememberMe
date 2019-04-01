@@ -8,14 +8,14 @@
 
 import Foundation
 
-struct User: Equatable {
+struct User: Equatable, Codable {
     let name: String
     let aboutMe: String
     let profileImage: String
     let phoneNumber: String
 }
 
-struct Friend {
+struct Friend: Decodable {
     let callingCardImage: String
     let introduce: String
     let owner: User

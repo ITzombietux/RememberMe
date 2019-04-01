@@ -17,7 +17,10 @@ class EditProfileViewController: UIViewController, Stateful {
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var aboutMeTextView: UITextView!
     
+    var nameDidChange = false
+    var aboutMeDidChange = false
     var stateController: StateController?
+    var settingsController: SettingsController?
     weak var delegate: EditProfileViewControllerDelegate?
 
     override func viewDidLoad() {
@@ -36,21 +39,33 @@ class EditProfileViewController: UIViewController, Stateful {
 
     }
     
-    @IBAction func save(_ sender: AnyObject) {
-        if let stateController = stateController, let name = nameTextField.text, let aboutMe = aboutMeTextView.text,
-            !name.isEmpty && !aboutMe.isEmpty {
-            let oldUser = stateController.user
-            stateController.user = User(name: name, aboutMe: aboutMe, profileImage: oldUser.profileImage, phoneNumber: oldUser.phoneNumber)
-            delegate?.editProfileViewControllerDidEditProfileInfo(viewController: self)
-            dismiss(animated: true, completion: nil)
-        } else {
-            let title = "Missing name or about me"
-            let message = "Both name and about me need to be present to be able to save your editing"
-            let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-            let cancelAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-            alertController.addAction(cancelAction)
-            present(alertController, animated: true, completion: nil)
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let identifier = segue.identifier, identifier == "Save" else {
+            return
         }
+        guard let stateController = stateController, let name = nameTextField.text, let aboutMe = aboutMeTextView.text else {
+            return
+        }
+        let oldUser = stateController.user
+        stateController.user = User(name: name, aboutMe: aboutMe, profileImage: oldUser.profileImage, phoneNumber: oldUser.phoneNumber)
+        nameDidChange = name != oldUser.name
+        aboutMeDidChange = aboutMe != oldUser.aboutMe
+    }
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        guard identifier == "Save" else {
+            return true
+        }
+        guard nameTextField.text?.count == 0 || aboutMeTextView.text?.count == 0 else {
+            return true
+        }
+        let title = "Missing name or about me"
+        let message = "Both name and about me need to be present to be able to save your editing"
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(cancelAction)
+        present(alertController, animated: true, completion: nil)
+        return false
     }
     
     @IBAction func cancel(_ sender: AnyObject) {
