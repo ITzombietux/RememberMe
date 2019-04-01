@@ -30,4 +30,16 @@ class FriendCell: UITableViewCell {
             phoneNumberLabel.text = phoneNumber
         }
     }
+    
+    var phoneNumberColor: UIColor? {
+        didSet {
+            phoneNumberLabel.textColor = phoneNumberColor
+        }
+    }
+    
+    var nameColor: UIColor? {
+        didSet {
+            nameLabel.textColor = nameColor
+        }
+    }
 }

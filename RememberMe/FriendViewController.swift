@@ -17,7 +17,14 @@ class FriendViewController: UITableViewController, Stateful {
     @IBOutlet weak var profileImage: UIImageView!
     
     var stateController: StateController?
+    var settingsController: SettingsController?
     var friend: Friend?
+    
+    var introduceColor: UIColor? {
+        didSet {
+            introduceLabel.textColor = introduceColor
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,6 +46,15 @@ class FriendViewController: UITableViewController, Stateful {
             passState(to: profileViewController)
             profileViewController.user = friend?.owner
         }
+    }
+    
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        guard let scheme = settingsController?.scheme else {
+            return
+        }
+        phoneNumberLabel.textColor = scheme.phoneNumberColor
+        introduceLabel.textColor = scheme.introduceColor
+        nameLabel.textColor = scheme.nameColor
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
