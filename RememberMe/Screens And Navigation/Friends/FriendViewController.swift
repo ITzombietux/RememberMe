@@ -48,6 +48,7 @@ class FriendViewController: UITableViewController, Stateful {
         }
     }
     
+    
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         guard let scheme = settingsController?.scheme else {
             return

@@ -29,6 +29,7 @@
 		930093932251DFF700EDFD6D /* ColorScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930093922251DFF700EDFD6D /* ColorScheme.swift */; };
 		930093952251E38600EDFD6D /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930093942251E38600EDFD6D /* SettingsController.swift */; };
 		930093972251E4E100EDFD6D /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930093962251E4E100EDFD6D /* SettingsViewController.swift */; };
+		939D213D225852EE00474806 /* NewFriendController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939D213C225852EE00474806 /* NewFriendController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		930093922251DFF700EDFD6D /* ColorScheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorScheme.swift; sourceTree = "<group>"; };
 		930093942251E38600EDFD6D /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		930093962251E4E100EDFD6D /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		939D213C225852EE00474806 /* NewFriendController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFriendController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,30 +91,71 @@
 			isa = PBXGroup;
 			children = (
 				9300935E224D087900EDFD6D /* AppDelegate.swift */,
-				93009360224D087900EDFD6D /* FriendViewController.swift */,
-				93009362224D087900EDFD6D /* Main.storyboard */,
 				93009365224D087B00EDFD6D /* Assets.xcassets */,
 				93009367224D087B00EDFD6D /* LaunchScreen.storyboard */,
+				939D213E225858F200474806 /* UI */,
+				939D213F2258592700474806 /* Screens And Navigation */,
+				939D2142225859E400474806 /* Model And States */,
 				9300936A224D087B00EDFD6D /* Info.plist */,
-				93009370224D097100EDFD6D /* Model.swift */,
-				93009372224D098B00EDFD6D /* StateController.swift */,
-				93009374224D0C8C00EDFD6D /* Views.swift */,
-				93009376224DAB9C00EDFD6D /* ProfileViewController.swift */,
-				93009378224DAE1500EDFD6D /* EditProfileViewController.swift */,
-				9300937A224DE42F00EDFD6D /* Stateful.swift */,
-				9300937C224DE67300EDFD6D /* MainTabBarController.swift */,
-				9300937E224E0FF300EDFD6D /* UIColor.swift */,
-				93009380224E168600EDFD6D /* UINavigationBar.swift */,
-				93009388224E454400EDFD6D /* TopFriendsViewController.swift */,
-				9300938A224E473300EDFD6D /* FriendCell.swift */,
-				9300938C224E4CC400EDFD6D /* FriendDataSource.swift */,
-				9300938E2251BE9300EDFD6D /* Data.plist */,
-				930093902251DC6F00EDFD6D /* StorageController.swift */,
-				930093922251DFF700EDFD6D /* ColorScheme.swift */,
-				930093942251E38600EDFD6D /* SettingsController.swift */,
-				930093962251E4E100EDFD6D /* SettingsViewController.swift */,
 			);
 			path = RememberMe;
+			sourceTree = "<group>";
+		};
+		939D213E225858F200474806 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				93009374224D0C8C00EDFD6D /* Views.swift */,
+				9300937E224E0FF300EDFD6D /* UIColor.swift */,
+				93009380224E168600EDFD6D /* UINavigationBar.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		939D213F2258592700474806 /* Screens And Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				93009362224D087900EDFD6D /* Main.storyboard */,
+				9300937A224DE42F00EDFD6D /* Stateful.swift */,
+				9300937C224DE67300EDFD6D /* MainTabBarController.swift */,
+				930093962251E4E100EDFD6D /* SettingsViewController.swift */,
+				939D21412258598F00474806 /* Users */,
+				939D21402258598300474806 /* Friends */,
+			);
+			path = "Screens And Navigation";
+			sourceTree = "<group>";
+		};
+		939D21402258598300474806 /* Friends */ = {
+			isa = PBXGroup;
+			children = (
+				93009360224D087900EDFD6D /* FriendViewController.swift */,
+				93009388224E454400EDFD6D /* TopFriendsViewController.swift */,
+				9300938C224E4CC400EDFD6D /* FriendDataSource.swift */,
+				9300938A224E473300EDFD6D /* FriendCell.swift */,
+				939D213C225852EE00474806 /* NewFriendController.swift */,
+			);
+			path = Friends;
+			sourceTree = "<group>";
+		};
+		939D21412258598F00474806 /* Users */ = {
+			isa = PBXGroup;
+			children = (
+				93009376224DAB9C00EDFD6D /* ProfileViewController.swift */,
+				93009378224DAE1500EDFD6D /* EditProfileViewController.swift */,
+			);
+			path = Users;
+			sourceTree = "<group>";
+		};
+		939D2142225859E400474806 /* Model And States */ = {
+			isa = PBXGroup;
+			children = (
+				930093902251DC6F00EDFD6D /* StorageController.swift */,
+				930093942251E38600EDFD6D /* SettingsController.swift */,
+				930093922251DFF700EDFD6D /* ColorScheme.swift */,
+				93009372224D098B00EDFD6D /* StateController.swift */,
+				93009370224D097100EDFD6D /* Model.swift */,
+				9300938E2251BE9300EDFD6D /* Data.plist */,
+			);
+			path = "Model And States";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,6 +241,7 @@
 				93009361224D087900EDFD6D /* FriendViewController.swift in Sources */,
 				93009375224D0C8C00EDFD6D /* Views.swift in Sources */,
 				9300935F224D087900EDFD6D /* AppDelegate.swift in Sources */,
+				939D213D225852EE00474806 /* NewFriendController.swift in Sources */,
 				93009379224DAE1500EDFD6D /* EditProfileViewController.swift in Sources */,
 				93009381224E168600EDFD6D /* UINavigationBar.swift in Sources */,
 				93009389224E454400EDFD6D /* TopFriendsViewController.swift in Sources */,
