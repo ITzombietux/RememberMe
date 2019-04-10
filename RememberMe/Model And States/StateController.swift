@@ -22,6 +22,11 @@ class StateController {
         self.topFriends = storageController.fetchTopFriends() ?? []
     }
     
+    func add(_ newFriend: Friend) {
+        topFriends.append(newFriend)
+        storageController.save(user)
+    }
+    
     func updateFriend(_ friend: Friend) {
         var friendIndex = 0
         for (index, oldFriend) in topFriends.enumerated() {

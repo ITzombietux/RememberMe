@@ -32,15 +32,27 @@ class TopQuestionsViewController: UIViewController, Stateful,  UITableViewDelega
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let friendViewController = segue.destination as? FriendViewController else {
-            return
-        }
-        passState(to: friendViewController)
-        if let indexPath = tableView.indexPathForSelectedRow {
-            friendViewController.friend = friendsDataSource?.friend(at: indexPath)
+        switch segue.identifier! {
+        case "CreateFriendSegue":
+            if let navigationController = segue.destination as? UINavigationController,
+                let newFriendController = navigationController.viewControllers.first as? NewFriendController {
+                newFriendController.stateController = stateController
+            }
+        case "friendSegue":
+            guard let friendViewController = segue.destination as? FriendViewController else {
+                return
+            }
+            passState(to: friendViewController)
+            if let indexPath = tableView.indexPathForSelectedRow {
+                friendViewController.friend = friendsDataSource?.friend(at: indexPath)
+            }
+            
+        default:
+            break
         }
     }
     
+
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if let cell = cell as? FriendCell,
             let scheme = settingsController?.scheme {
@@ -49,4 +61,6 @@ class TopQuestionsViewController: UIViewController, Stateful,  UITableViewDelega
         }
     }
 
+    @IBAction func cancelFriendCreation(_ segue: UIStoryboardSegue) {}
+    @IBAction func saveFriend(_ segue: UIStoryboardSegue) {}
 }
